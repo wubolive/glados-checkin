@@ -26,7 +26,7 @@ def start():
         time = time.split('.')[0]
         print("本次签到信息: %s , 剩余使用天数: %s" % (message, time))
         if sever == 'on':
-            requests.get('https://sc.ftqq.com/' + sckey + '.send?text=' + '本次签到信息:' + message + '; 你还剩余: ' + time + ' 天左右过期')
+            requests.get('https://sc.ftqq.com/' + sckey + '.send?text=' + '本次签到信息: ' + message + ',  你的GLaDOS账号还剩余: ' + time + ' 天左右过期。')
     else:
         requests.get('https://sc.ftqq.com/' + sckey + '.send?text=cookie已过期，请更换cookie信息')
         print("cookie已过期，请更换cookie信息")
